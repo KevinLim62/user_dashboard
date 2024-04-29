@@ -1,12 +1,12 @@
-import { Button } from "../../ui/components/Button";
+import { FcGoogle } from "react-icons/fc";
 import {
   Card,
   CardContent,
   CardFooter,
   CardHeader,
   CardTitle,
-} from "../../ui/components/Card";
-import { FcGoogle } from "react-icons/fc";
+} from "@/app/ui/components/Card";
+import { Button } from "@/app/ui/components/Button";
 
 export default function LoginPage() {
   return (

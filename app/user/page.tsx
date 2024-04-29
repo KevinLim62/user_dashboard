@@ -1,7 +1,7 @@
-import ProgressBar from "../../ui/ProgressBar";
+import ProgressBar from "@/app/ui/ProgressBar";
 import { Suspense } from "react";
-import { UserListSkeleton } from "../../ui/Skeleton";
-import UserList from "../../ui/UserList";
+import { UserListSkeleton } from "@/app/ui/Skeleton";
+import UserList from "@/app/ui/UserList";
 
 export default async function UserPage() {
   return (
