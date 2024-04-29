@@ -4,19 +4,12 @@ export const retrieveUsers = async () => {
   const result = await fetch(`${baseUrl}`, {
     cache: "no-store",
   });
-
   //Purposely added timeout function to simulate loading effect
-  await new Promise((resolve) => setTimeout(resolve, 3000));
-
+  await new Promise((resolve) => setTimeout(resolve, 2000));
   return await result.json();
 };
 
 export const retrieveUserById = async (userId: string) => {
-  const result = await fetch(`${baseUrl}/${userId}`, {
-    cache: "no-store",
-  });
-  //Purposely added timeout function to simulate loading effect
-  await new Promise((resolve) => setTimeout(resolve, 3000));
-
+  const result = await fetch(`${baseUrl}/${userId}`);
   return await result.json();
 };

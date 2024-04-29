@@ -1,6 +1,6 @@
 import { retrieveUserById } from "@/app/lib/actions/users";
 import { User } from "@/app/lib/types";
-import UserCard from "@/app/ui/UserCard";
+import UserDetail from "@/app/ui/UserDetail";
 
 export default async function SingleUserPage({
   params,
@@ -13,8 +13,7 @@ export default async function SingleUserPage({
 
   return (
     <section className="flex flex-col items-center justify-center p-24">
-      <h1 className="font-bold text-4xl">{user.name}</h1>
-      <UserCard user={user} className="w-[500px]" />
+      <UserDetail user={user} className="min-w-[500px] shadow-md" />
     </section>
   );
 }

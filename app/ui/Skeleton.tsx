@@ -1,32 +1,35 @@
 "use client";
 
-const shimmer =
-  "before:absolute before:inset-0 before:-translate-x-full before:animate-[shimmer_2s_infinite] before:bg-gradient-to-r before:from-transparent before:via-white/60 before:to-transparent";
+// User Skeleton
 
-// Base Skeleton
-export const UserSkeleton = () => {
+export const UserDetailSkeleton = () => {
   return (
     <div
-      className={`${shimmer} relative overflow-hidden rounded-xl bg-gray-100 p-2 shadow-sm w-[300px]`}
+      className={`relative overflow-hidden rounded-xl bg-gray-100 p-2 shadow-md min-w-[500px]`}
     >
       <div className="flex items-center p-4">
-        <div className="h-10 w-10 rounded-full bg-gray-200" />
-        <div className="ml-2 h-6 w-16 rounded-md bg-gray-200 text-sm font-medium" />
+        <div className="animate-pulse h-20 w-20 rounded-full bg-gray-200" />
+        <div className="flex flex-col space-y-3">
+          <div className="animate-pulse ml-2 h-6 w-32 rounded-md bg-gray-200 text-sm font-medium" />
+          <div className="animate-pulse ml-2 h-6 w-32 rounded-md bg-gray-200 text-sm font-medium" />
+        </div>
       </div>
       <div className="flex flex-col truncate rounded-xl bg-white px-4 py-4 space-y-3">
-        <div className="h-7 w-40 rounded-md bg-gray-200" />
-        <div className="h-7 w-20 rounded-md bg-gray-200" />
+        <div className="animate-pulse h-7 w-60 rounded-md bg-gray-200" />
+        <div className="animate-pulse h-7 w-60 rounded-md bg-gray-200" />
+        <div className="animate-pulse h-7 w-40 rounded-md bg-gray-200" />
+        <div className="animate-pulse h-7 w-40 rounded-md bg-gray-200" />
       </div>
     </div>
   );
 };
 
-export const UserListingSkeleton = () => {
+export const UserListSkeleton = () => {
   return (
-    <div className="grid grid-cols-3 gap-4 pt-5">
-      {Array.from({ length: 10 }, (_, i) => (
-        <UserSkeleton key={i} />
+    <ul className="flex flex-col space-y-3 pt-5 w-[300px]">
+      {Array.from({ length: 20 }, (_, i) => (
+        <li className="animate-pulse bg-slate-300 rounded-md text-lg font-medium hover:underline h-10" />
       ))}
-    </div>
+    </ul>
   );
 };
